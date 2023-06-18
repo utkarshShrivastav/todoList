@@ -1,0 +1,109 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: grey;
+    display:flex;
+    justify-content: center;
+}
+
+.wrapper-container{
+    margin: 50px 0;
+    background-color: white;
+    width:50%;
+}
+
+header{
+    text-align: center;
+    padding: 10px 0;
+    border-bottom:1px solid grey;
+}
+h1{
+    font-size: 2.5rem;
+}
+
+form{
+    width:100%;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 3;
+}
+
+#description-container{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#category-container{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#date-container{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border-left: 1px solid grey;
+}
+
+.button-container{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.inputBox{
+    display:flex;
+    flex-direction: column;
+    border-bottom:1px solid grey;
+    width:100%;
+    padding:  10px 20px ;
+}
+
+label{
+    font-weight: 900;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+input, select, option{
+    font-size: 1rem;
+}
+.inputField{
+    border: none;
+}
+#date, #description, #category{
+    border: none;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+#addTaskBtn{
+    background-color: grey;
+    padding: 10px 30px 10px 10px;
+    color: white;
+    font-weight: 900;
+    border:none
+}
+
+i{
+    padding: 10px 0 10px 30px;
+    background-color: grey;
+    color: white;
+}
+
+
