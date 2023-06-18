@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO List</title>
+    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Linking stylesheet to the html page  -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -17,15 +19,16 @@
             <h1 class="heading">TODO App</h1>
         </header>
 
+        <!-- Form to collect information -->
         <form action="/addTask" method="post">
-            <div class="inputBox" id="description-container">
+            <div class="inputBox" id="description-container"><!-- Description of task -->
                 <label for="description">DESCRIPTION</label>
                 <input type="text" name="description" class="inputField" id="description"
-                    placeholder="What do you need to do?">
+                    placeholder="What do you need to do?" maxlength="15">
             </div>
-            <div class="inputBox" id="category-container">
+            <div class="inputBox" id="category-container"> <!--  category of task -->
                 <label for="category">CATEGORY</label>
-                <select name="category" class="inputfield" id="category">
+                <select name="category" class="inputfield" id="category"><!--create dropdown to select option-->
                     <option value="choose your category">Choose your category</option>
                     <option value="personal">Personal</option>
                     <option value="work">Work</option>
@@ -36,13 +39,40 @@
             </div>
             <div class="inputBox" id="date-container">
                 <label for="date">DATE</label>
-                <input type="date" name="date" class="inputfield" id="date">
+                <input type="date" name="date" class="inputfield" id="date"> <!-- Completion date of task -->
             </div>
             <div class="button-container">
-                <i class="fa-sharp fa-solid fa-plus"></i>
-                <input type="submit" class="btn" id="addTaskBtn" value="ADD TASK">
+                <span class="add-button-container">
+                    <i class="fa-sharp fa-solid fa-plus"></i>
+                    <input type="submit" class="btn" id="addTaskBtn" value="ADD TASK"> <!-- Add task -->
+                </span>
+                <span class="deleteAll-button-container"><!-- delete all task -->
+                    <i class="fa-solid fa-trash-can"></i>
+                   <a href="/deleteAllTask"> <input type="button" class="btn" id="deleteAllTaskBtn" value="DELETE ALL TASK"></a>
+                </span>
             </div>
         </form>
+        <div class="task-container"><!-- Display all tasks -->
+            <% for ( var i=0 ; i <contacts.length ; i++){ %>
+                <div class="card" id="card<%=[i]%>">
+                    <p class="description-display"><!--display task description  -->
+                        <%=contacts[i].description%>
+                    </p>
+                    <p class="category-display" id="<%=contacts[i].category%>"><!--display task category  -->
+                        <%=contacts[i].category%>
+                    </p>
+                    <div class="date-display-container" ">
+                        <i class=" fa-solid fa-calendar-days"></i><!--display task date  -->
+                        <p class="date-display">
+                            <%=contacts[i].date%>
+                        </p>
+                    </div>
+                    <a href="/deleteTask/?id=<%=contacts[i]._id%>" class="delete-icon" id="deleteTaskAnchorTag"><i
+                            class="fa-solid fa-trash-can"></i>
+                    </a><!-- delete task task -->
+                </div>
+                <%}%>
+        </div>
     </div>
 </body>
 

@@ -82,6 +82,9 @@ input, select, option{
 .inputField{
     border: none;
 }
+:focus{
+    outline: none;
+}
 #date, #description, #category{
     border: none;
 }
@@ -90,20 +93,113 @@ input, select, option{
     display: flex;
     justify-content: center;
     padding: 10px;
+} 
+.add-button-container{
+    background-color: grey;
 }
 
-#addTaskBtn{
-    background-color: grey;
+ .btn{
+    background-color: transparent;
     padding: 10px 30px 10px 10px;
     color: white;
     font-weight: 900;
-    border:none
+    border:none;
+    font-size: 1.15rem;
+}
+.deleteAll-button-container{
+    background-color: coral;
+    margin-left: 10px;
 }
 
-i{
-    padding: 10px 0 10px 30px;
-    background-color: grey;
+.fa-plus, .deleteAll-button-container .fa-trash-can{
+    padding: 10px 0 10px 10px;
     color: white;
 }
 
+
+.card{
+    border-top:1px solid grey;
+    padding: 10px 20px;
+    display: grid;
+    width:100%;
+    grid-template-columns: 65% 25% 10%;
+    grid-template-rows: 2;
+}
+
+.description-display{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.category-display{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin: 15px 0;
+    padding: 10px;
+    font-size: 1.15rem;
+    text-transform: capitalize;
+    color:white;
+    font-weight: 900;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.date-display-container{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    align-items: center;
+}
+.fa-calendar-days{
+    margin-right: 10px;
+    font-size: 1.25rem;
+   
+}
+
+.delete-icon{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display:flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 1.5rem;
+    color:black;
+    width:50px;
+    margin-left: 0;
+}
+
+#personal{
+    background: purple;
+}
+
+#work{
+    background-color: coral;
+}
+
+#school{
+    background-color: chocolate;
+}
+
+#cleaning{
+    background-color: darkgrey;
+}
+
+#other{
+    background-color: deeppink;
+}
+#deleteTaskAnchorTag .fa-trash-can{
+    margin: 0;
+    color: black;
+}
 
