@@ -1,53 +1,54 @@
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
     font-family: 'Courier New', Courier, monospace;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: grey;
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
-.wrapper-container{
+.wrapper-container {
     margin: 50px 0;
     background-color: white;
-    width:50%;
+    width: 50%;
 }
 
-header{
+header {
     text-align: center;
     padding: 10px 0;
-    border-bottom:1px solid grey;
+    border-bottom: 1px solid grey;
 }
-h1{
+
+h1 {
     font-size: 2.5rem;
 }
 
-form{
-    width:100%;
+form {
+    width: 100%;
     display: grid;
     grid-template-columns: 2;
     grid-template-rows: 3;
 }
 
-#description-container{
+#description-container {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-#category-container{
+#category-container {
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-#date-container{
+#date-container {
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
@@ -55,78 +56,88 @@ form{
     border-left: 1px solid grey;
 }
 
-.button-container{
+.button-container {
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-.inputBox{
-    display:flex;
+.inputBox {
+    display: flex;
     flex-direction: column;
-    border-bottom:1px solid grey;
-    width:100%;
-    padding:  10px 20px ;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    padding: 10px 20px;
 }
 
-label{
+label {
     font-weight: 900;
     font-size: 1.2rem;
     line-height: 2rem;
 }
 
-input, select, option{
+input,
+select,
+option {
     font-size: 1rem;
 }
-.inputField{
-    border: none;
-}
-:focus{
-    outline: none;
-}
-#date, #description, #category{
+
+.inputField {
     border: none;
 }
 
-.button-container{
+:focus {
+    outline: none;
+}
+
+#date,
+#description,
+#category {
+    border: none;
+}
+
+.button-container {
     display: flex;
     justify-content: center;
     padding: 10px;
-} 
-.add-button-container{
+}
+
+.add-button-container {
     background-color: grey;
 }
 
- .btn{
+.btn {
     background-color: transparent;
     padding: 10px 30px 10px 10px;
     color: white;
     font-weight: 900;
-    border:none;
+    border: none;
     font-size: 1.15rem;
 }
-.deleteAll-button-container{
+
+.deleteAll-button-container {
     background-color: coral;
     margin-left: 10px;
 }
 
-.fa-plus, .deleteAll-button-container .fa-trash-can{
+.fa-plus,
+.deleteAll-button-container .fa-trash-can {
     padding: 10px 0 10px 10px;
     color: white;
 }
 
 
-.card{
-    border-top:1px solid grey;
+.card {
+    border-top: 1px solid grey;
     padding: 10px 20px;
     display: grid;
-    width:100%;
+    width: 100%;
     grid-template-columns: 65% 25% 10%;
     grid-template-rows: 2;
 }
 
-.description-display{
+.description-display {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -135,7 +146,8 @@ input, select, option{
     font-size: 1.25rem;
     font-weight: bold;
 }
-.category-display{
+
+.category-display {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -144,14 +156,15 @@ input, select, option{
     padding: 10px;
     font-size: 1.15rem;
     text-transform: capitalize;
-    color:white;
+    color: white;
     font-weight: 900;
     margin-left: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.date-display-container{
+
+.date-display-container {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -159,47 +172,123 @@ input, select, option{
     display: flex;
     align-items: center;
 }
-.fa-calendar-days{
+
+.fa-calendar-days {
     margin-right: 10px;
     font-size: 1.25rem;
-   
+
 }
 
-.delete-icon{
+.delete-icon {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 3;
-    display:flex;
+    display: flex;
     justify-content: end;
     align-items: center;
     font-size: 1.5rem;
-    color:black;
-    width:50px;
+    color: black;
+    width: 50px;
     margin-left: 0;
 }
 
-#personal{
+#personal {
     background: purple;
 }
 
-#work{
+#work {
     background-color: coral;
 }
 
-#school{
+#school {
     background-color: chocolate;
 }
 
-#cleaning{
+#cleaning {
     background-color: darkgrey;
 }
 
-#other{
+#other {
     background-color: deeppink;
 }
-#deleteTaskAnchorTag .fa-trash-can{
+
+#deleteTaskAnchorTag .fa-trash-can {
     margin: 0;
     color: black;
 }
 
+@media only screen and (max-width: 1024px) and (min-width:768px) {
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .deleteAll-button-container {
+        margin-top: 10px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .add-button-container {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .deleteAll-button-container {
+        margin-top: 10px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .add-button-container {
+        text-align: center;
+    }
+
+    .card {
+        display: grid;
+        grid-template-areas:
+            "description delete"
+            "category category"
+            "date date";
+    }
+
+    .description-display {
+        grid-area: description;
+    }
+
+    .category-display {
+        grid-area: category;
+    }
+
+    .date-display-container {
+        grid-area: date;
+    }
+
+    .delete-icon {
+        grid-area: delete;
+    }
+
+    .category-display {
+        padding: 10px 0;
+        margin: 10px 0;
+    }
+
+}
