@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const port = 9000;
 const routes = require("./backend/routes/htmlRoutes");
+const db = require("./backend/config/mongoose");
 const app = express();
 
 app.set("views",path.join(__dirname,"./client/views"));
